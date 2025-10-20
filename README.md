@@ -1,6 +1,6 @@
 # virtualbox-cpu-autoscaler-java
 Java host controller that hot-plugs CPUs into a VirtualBox VM based on Guest/CPU/Load/Idle.
-# VirtualBox CPU Hot-Plug Controller (Project 4)
+# VirtualBox CPU Hot-Plug Controller 
 
 Elastic CPU scaling for a VirtualBox VM using Java. The host program monitors the VM's `Guest/CPU/Load/Idle` metric and hot-plugs/unplugs vCPUs on-the-fly based on load. A guest-side program generates CPU-intensive load to demonstrate elasticity.
 
