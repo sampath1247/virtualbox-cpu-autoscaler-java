@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Compile Java sources
+        run: |
+          ls -la
+          if [ -f src/p04.java ]; then
+            javac src/p04.java
+          fi
+          if [ -f src/p04_load.java ]; then
+            javac src/p04_load.java
+          fi
